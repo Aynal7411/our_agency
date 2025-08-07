@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Our Employees - Milon-Tech{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 style="color: black;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight: bold;">............Our Team ............</h2>
+
+    {% if employees %}
+        <div class="employee-cards">
+            {% for emp in employees %}
+                <div class="employee-card" style="border:1px solid #ccc; padding:15px; margin-bottom:20px; border-radius:30px;">
+                    <h3>{{ emp.designation }}</h3>
+                    <p><strong>Designation:</strong><br> {{ emp.education|linebreaksbr }}</p>
+                    <p><strong>Expertise:</strong><br> {{ emp.expertise|linebreaksbr }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No employees found.</p>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Offers - Milon-Tech{% endblock %}
+
+{% block content %}
+<div class="container">
+    
+    <div class="offer-list">
+        {% for offer in offers %}
+            <div class="offer-card">
+                <h3>{{ offer.title }}</h3>
+                <p>{{ offer.description }}</p>
+            </div>
+        {% empty %}
+            <p>No offers available at the moment.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

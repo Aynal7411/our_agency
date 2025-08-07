@@ -1,0 +1,237 @@
+*{
+
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: hsl(64, 56%, 70%);
+}
+
+body {
+     padding-bottom: 60px; 
+     text-align: center;
+
+}
+
+h1{
+    font-size: 2.0em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    border-bottom: 2px solid #cccc17;
+    padding-bottom: 6px;
+    color: hwb(0 8% 92%);
+    text-align: center;
+    padding: 10px 20px 30px 40px;
+}
+
+.navbar {
+    background-color: hsl(59, 76%, 76%);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0%;
+  padding: 0%;
+}
+
+.nav-links li a {
+  color: hwb(0 3% 97%);
+  text-decoration: none;
+  font-size: 20px;
+  padding: 8px 12px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #faf8f9;
+  border-radius: 5px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(245, 225, 48);
+    color: hsl(0, 8%, 3%);
+    text-align: center;
+   
+    font-size: 18px;
+    z-index: 1000;
+    box-shadow: 0 -2px 5px rgba(156, 158, 7, 0.3);
+    font-weight: bold;
+}
+
+
+
+@media (max-width: 600px) {
+    .footer {
+        font-size: 12px;
+        padding: 8px 0;
+    }
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px lab(78.98% -53.3 73.87 / 0.05);
+    padding: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+h2 {
+    font-size: 2rem;
+    color: hwb(64 47% 11%);
+    text-align: center;
+}
+
+.text-primary {
+    color: #161515;
+}
+
+.text-muted {
+    color: #6c757d;
+    text-align: center;
+}
+
+h3 {
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.tree {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.tree li {
+    background: #f8f9fa;
+    margin-bottom: 8px;
+    padding: 10px 15px;
+    border-radius: 40px;
+    border-left: 5px solid #007bff;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+.tree li:hover {
+    background: #e9ecef;
+}
+
+.tree li span {
+    display: inline-block;
+    color: #333;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+.mt-4 {
+    margin-top: 1.5rem;
+}
+.mt-6 {
+    margin-top: 3rem;
+}
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.offer-list {
+  display: list-item;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+}
+
+.offer-card {
+  background-color: hwb(66 52% 7%);
+  border: 1px solid hsl(78, 83%, 66%);
+  border-radius: 30px;
+  padding: 25px 25px 30px 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.offer-card:hover {
+  box-shadow: 0 8px 20px #ac34341a;
+}
+
+.offer-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: hsl(210, 17%, 5%);
+  font-weight: 600;
+}
+
+.offer-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: hwb(0 11% 16%);
+}
+
+@media (max-width: 600px) {
+  .offer-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.employee-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.employee-card {
+    border: 1px solid hsl(66, 77%, 58%);
+    padding: 15px;
+    border-radius: 50%;
+    width: 100%;
+    max-width: 400px;
+    background-color: #e1e785;
+    transition: box-shadow 0.3s ease;
+}
+
+.employee-card:hover {
+    box-shadow: 2px 4px 12px 18px rgba(204, 127, 127, 0.1);
+}
+
+.employee-card h3 {
+    color: #141413;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.employee-card p {
+    color: hsl(266, 97%, 45%);
+    line-height: 1.6;
+    font-size: 16px;
+}

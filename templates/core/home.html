@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="container mt-6">
+    <div class="card shadow-sm border-2">
+        <div class="card-body">
+            <h2 class="mb-3 text-primary"><strong>Welcome To milon-Tech</strong></h2>
+            <p class="text-muted">Empowering businesses with cutting-edge software solutions from Bangladesh.</p>
+
+            <h3 class="mt-4 mb-3">Our Technology</h3>
+            <ul class="tree mt-2">
+                {% for skill in skill_list %}
+                    <li><span>{{ skill.name }}</span></li>
+                {% empty %}
+                    <li><span>No skills found.</span></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

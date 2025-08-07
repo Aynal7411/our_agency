@@ -1,0 +1,38 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Bongo-Tech</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome To Milon-Tech</h1>
+        <nav class="navbar">
+             <div class="container">
+               <ul class="nav-links">  
+          <li><a href="{% url 'home' %}">Home</a></li>
+           <li> <a href="{% url 'offer' %}">We Offer</a></li>
+           <li> <a href="{% url 'about' %}">About Us</a></li>
+           <li> <a href="{% url 'contact' %}">Contact Us</a></li>
+           </ul>
+           </div>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+   <footer class="footer animate-footer">
+    <p>Developed By Md. Aynal Haque (Milon)</p>
+    <p>© 2025 Milon-Tech. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
