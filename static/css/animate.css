@@ -1,0 +1,68 @@
+.animated-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    animation: fadeZoomIn 10s ease-in-out forwards;
+    color: hsl(24, 68%, 64%); /* আপনার পছন্দমত কালার দিন */
+    text-shadow: 2px 2px 5px hwb(0 90% 6% / 0.897);
+   
+}
+
+/* Animation Keyframes */
+@keyframes fadeZoomIn {
+    0% {
+        color: hwb(60 4% 95%);
+        opacity: 0.9;
+        transform: scale(0.8);
+    }
+
+    25% {
+        color: hwb(15 82% 12%);
+        text-shadow: 0 0 10px hsl(30, 5%, 83%),
+                     0 0 20px hsl(40, 65%, 5%),
+                     0 0 40px hsl(37, 23%, 86%);
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(0.6);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.0);
+    }
+}
+
+/* List Items Slide In Sequentially */
+.list-item {
+    opacity: 0;
+    transform: translateX(-80px);
+    animation: listSlideIn 3s ease-out forwards;
+
+}
+
+@keyframes listSlideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+}
+
+/* Delay each item for sequential effect */
+.list-item:nth-child(1) { animation-delay: 0.2s; }
+.list-item:nth-child(2) { animation-delay: 0.4s; }
+.list-item:nth-child(3) { animation-delay: 0.6s; }
+.list-item:nth-child(4) { animation-delay: 0.8s; }
+.list-item:nth-child(5) { animation-delay: 1s; }
+.list-item:nth-child(6) { animation-delay: 1.2s; }
+.list-item:nth-child(7) { animation-delay: 1.4s; }
+.list-item:nth-child(8) { animation-delay: 1.6s; }
+.list-item:nth-child(9) { animation-delay: 1.8s; }
+.list-item:nth-child(10) { animation-delay: 2s; }
+.list-item:nth-child(11) { animation-delay: 2.2s; }
+.list-item:nth-child(12) { animation-delay: 2.4s; }

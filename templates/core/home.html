@@ -10,9 +10,9 @@
             <h3 class="mt-4 mb-3">Our Technology</h3>
             <ul class="tree mt-2">
                 {% for skill in skill_list %}
-                    <li><span>{{ skill.name }}</span></li>
+                    <li class="list-item"><span>{{ skill.name }}</span></li>
                 {% empty %}
-                    <li><span>No skills found.</span></li>
+                    <li class="list-item"><span>No skills found.</span></li>
                 {% endfor %}
             </ul>
         </div>
