@@ -1,0 +1,23 @@
+<!-- templates/career/career_list.html -->
+{% extends "core/base.html" %}
+
+{% block title %}Career Opportunities{% endblock %}
+
+{% block content %}
+    <h1 style="color: brown;">Career Opportunities</h1>
+
+    {% if careers %}
+        <ul style="color: black;">
+            {% for career in careers %}
+                <li>
+                    <h2 style="color: black;">{{ career.title }}</h2>
+                    <p><strong>Location:</strong> {{ career.location }}</p>
+                    <p>{{ career.description|linebreaks }}</p>
+                    <p><small>Posted on: {{ career.posted_date|date:"F j, Y" }}</small></p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No current career opportunities available.</p>
+    {% endif %}
+{% endblock %}
