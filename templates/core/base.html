@@ -9,6 +9,7 @@
     <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
 
     <title>Milon-Tech</title>
+
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/animate.css' %}">
 </head>
@@ -17,11 +18,12 @@
         <h1 class="animated-title">Welcome To Milon-Tech</h1>
         <nav class="navbar">
              <div class="container">
-               <ul class="nav-links">  
-          <li><a href="{% url 'home' %}">Home</a></li>
-           <li> <a href="{% url 'offer' %}">We Offer</a></li>
-           <li> <a href="{% url 'about' %}">About Us</a></li>
-           <li> <a href="{% url 'contact' %}">Contact Us</a></li>
+                 
+            <ul class="nav-links" id="nav-links">  
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li> <a href="{% url 'offer' %}">We Offer</a></li>
+            <li> <a href="{% url 'about' %}">About Us</a></li>
+            <li> <a href="{% url 'contact' %}">Contact Us</a></li>
             <li> <a href="{% url 'career_list' %}">Career</a></li>
            </ul>
            </div>

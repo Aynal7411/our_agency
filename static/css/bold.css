@@ -1,0 +1,116 @@
+/* style.css */
+
+/* Reset some basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background: #0a74da;
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 6px rgba(10, 116, 218, 0.3);
+}
+
+.animated-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Navbar */
+.navbar {
+  background: #064a9c;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+  color: #ffd54f;
+  outline: none;
+}
+
+
+
+
+/* Footer */
+footer.footer {
+  background: #0a74da;
+  color: white;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  margin-top: auto;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 6px rgba(10, 116, 218, 0.3);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #064a9c;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+
+  .toggle-button {
+    display: block;
+  }
+
+  .container {
+    position: relative;
+  }
+}
